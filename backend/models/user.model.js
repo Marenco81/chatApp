@@ -24,7 +24,8 @@ const userSchema = new mongoose.Schema({
         type: String,
         default: "https://cvhrma.org/wp-content/uploads/2015/07/default-profile-photo.jpg",
     },
-});
+    // createdAt, updatedAt => Member since <createdAt>
+}, {timestamps: true});
 
 const User = mongoose.model("User", userSchema);
 
