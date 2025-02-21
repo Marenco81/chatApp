@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 
 const Login = () => {
   return (
@@ -32,7 +33,7 @@ const Login = () => {
                 <button className="btn btn-block btn-sm mt-8">Login</button>
             </div>
 
-            <a href="#" className="text-sm text-gray-300 hover:underline hover:text-blue-600 mt-4 flex justify-end">{"Don't"} have an account?</a>
+            <Link to="/signup" className="text-sm text-gray-300 hover:underline hover:text-blue-600 mt-4 flex justify-end">{"Don't"} have an account?</Link>
 
         </form>
       </div>
