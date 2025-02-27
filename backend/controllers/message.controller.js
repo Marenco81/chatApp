@@ -21,7 +21,7 @@ export const sendMessage = async (req, res) => {
             senderId: senderId,
             receiverId: receiverId,
             message: message,
-        })
+        });
 
         if(newMessage) {
             conversation.messages.push(newMessage._id);
@@ -34,7 +34,7 @@ export const sendMessage = async (req, res) => {
 
         //This will run in parallel (both will run at the same time)
         await Promise.all([conversation.save(), newMessage.save()]);
-        res.status(201).json({newMessage});
+        res.status(201).json(newMessage);
 
     } catch (error) {
         console.log("Error in sendMessage controller: ", error.message );
