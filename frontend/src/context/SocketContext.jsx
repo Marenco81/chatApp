@@ -6,7 +6,7 @@ const SocketContext = createContext();
 
 export const useSocketContext = () => {
     return useContext(SocketContext);
-}
+};
 
 export const SocketContextProvider = ({ children }) => {
 
@@ -19,8 +19,8 @@ export const SocketContextProvider = ({ children }) => {
             const socket = io("http://localhost:5000", {
                 query: {
                     userId: authUser._id,
-                }
-            } );
+                },
+            });
 
             setSocket(socket);
 
